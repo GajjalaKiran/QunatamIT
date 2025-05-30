@@ -1,0 +1,267 @@
+/* Register Page Specific Styles - Screen Fitted */
+.auth-container.register-page {
+  min-height: 100vh;
+  height: auto;
+  background: linear-gradient(135deg, #00bcd4, #26c6da);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 15px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  box-sizing: border-box;
+}
+
+/* Register form card - Responsive sizing */
+.register-card {
+  background: #3a4a5c;
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+  width: 100%;
+  max-width: 400px;
+  max-height: 90vh;
+
+  overflow-y: auto;
+  position: relative;
+  border: 1px solid #4a5568;
+  box-sizing: border-box;
+}
+
+/* Register header styling - Reduced spacing */
+.register-header {
+  background: #00e5ff;
+  color: #2d3748;
+  margin: -30px -30px 20px -30px;
+  padding: 15px;
+  text-align: center;
+  font-weight: 600;
+  font-size: 14px;
+  border-radius: 20px 20px 0 0;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+}
+
+/* Register form groups - Reduced spacing */
+.register-form .form-group {
+  margin-bottom: 18px;
+}
+
+.register-form .form-group label {
+  display: block;
+  color: #cbd5e0;
+  margin-bottom: 6px;
+  font-size: 14px;
+  font-weight: 500;
+  text-transform: lowercase;
+}
+
+/* Register input styling - Reduced padding */
+.register-form .form-group input {
+  width: 100%;
+  padding: 14px 12px;
+  border: none;
+  border-radius: 10px;
+  background: #4a5568;
+  color: #e2e8f0;
+  font-size: 15px;
+  box-sizing: border-box;
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+}
+
+.register-form .form-group input:focus {
+  outline: none;
+  background: #5a6578;
+  border-color: #00e5ff;
+  box-shadow: 0 0 0 2px rgba(0, 229, 255, 0.1);
+}
+
+.register-form .form-group input::placeholder {
+  color: #a0aec0;
+}
+
+/* Register submit button - Reduced padding */
+.register-form button[type="submit"] {
+  width: 100%;
+  padding: 14px;
+  background: #00e5ff;
+  color: #2d3748;
+  border: none;
+  border-radius: 10px;
+  font-size: 15px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 10px;
+  box-shadow: 0 4px 15px rgba(0, 229, 255, 0.3);
+}
+
+.register-form button[type="submit"]:hover {
+  background: #00bcd4;
+  transform: translateY(-1px);
+  box-shadow: 0 6px 20px rgba(0, 229, 255, 0.4);
+}
+
+.register-form button[type="submit"]:active {
+  transform: translateY(0);
+}
+
+/* Register error message styling - Reduced padding */
+.register-form .error {
+  color: #fc8181;
+  background: rgba(254, 178, 178, 0.1);
+  padding: 10px 12px;
+  border-radius: 8px;
+  margin-bottom: 15px;
+  text-align: center;
+  font-size: 13px;
+  border-left: 4px solid #fc8181;
+}
+
+/* Special styling for date input in register form */
+.register-form .form-group input[type="date"] {
+  color: #a0aec0;
+  position: relative;
+}
+
+.register-form .form-group input[type="date"]::-webkit-calendar-picker-indicator {
+  filter: invert(1);
+  opacity: 0.7;
+  cursor: pointer;
+}
+
+.register-form .form-group input[type="date"]:focus {
+  color: #e2e8f0;
+}
+
+/* Responsive design for register - Mobile first approach */
+@media (max-width: 768px) {
+  .auth-container.register-page {
+    padding: 10px;
+    justify-content: flex-start;
+    padding-top: 20px;
+  }
+ 
+  .register-card {
+    padding: 25px 20px;
+    max-width: 100%;
+    max-height: 85vh;
+    margin: 0;
+  }
+ 
+  .register-header {
+    margin: -25px -20px 15px -20px;
+    padding: 12px;
+    font-size: 13px;
+    letter-spacing: 1px;
+  }
+
+  .register-form .form-group {
+    margin-bottom: 15px;
+  }
+
+  .register-form .form-group input {
+    padding: 12px 10px;
+    font-size: 14px;
+  }
+
+  .register-form button[type="submit"] {
+    padding: 12px;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .auth-container.register-page {
+    padding: 8px;
+    padding-top: 15px;
+  }
+ 
+  .register-card {
+    padding: 20px 15px;
+    border-radius: 15px;
+    max-height: 80vh;
+  }
+ 
+  .register-header {
+    margin: -20px -15px 12px -15px;
+    padding: 10px;
+    font-size: 12px;
+    border-radius: 15px 15px 0 0;
+  }
+
+  .register-form .form-group {
+    margin-bottom: 12px;
+  }
+
+  .register-form .form-group label {
+    font-size: 13px;
+    margin-bottom: 5px;
+  }
+
+  .register-form .form-group input {
+    padding: 10px 8px;
+    font-size: 14px;
+    border-radius: 8px;
+  }
+
+  .register-form button[type="submit"] {
+    padding: 10px;
+    font-size: 13px;
+    border-radius: 8px;
+    margin-top: 8px;
+  }
+
+  .register-form .error {
+    padding: 8px 10px;
+    font-size: 12px;
+    margin-bottom: 10px;
+  }
+}
+
+/* Very small screens */
+@media (max-width: 360px) {
+  .register-card {
+    padding: 15px 10px;
+    max-height: 75vh;
+  }
+ 
+  .register-header {
+    margin: -15px -10px 10px -10px;
+    padding: 8px;
+  }
+}
+
+/* Landscape orientation adjustments */
+@media (max-height: 600px) and (orientation: landscape) {
+  .auth-container.register-page {
+    padding: 5px;
+    justify-content: center;
+  }
+  
+  .register-card {
+    max-height: 95vh;
+    padding: 15px;
+  }
+  
+  .register-header {
+    margin: -15px -15px 10px -15px;
+    padding: 8px;
+  }
+  
+  .register-form .form-group {
+    margin-bottom: 10px;
+  }
+  
+  .register-form .form-group input {
+    padding: 8px;
+  }
+  
+  .register-form button[type="submit"] {
+    padding: 8px;
+    margin-top: 5px;
+  }
+}
